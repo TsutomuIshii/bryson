@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>検索結果</title>
+<meta name="keywords" content="CSS,XHTML,Webサイト制作,Webデザイナー,Movable Type,CSS Lecture," />
+<meta name="description" content="検索結果" />
+<meta http-equiv="Content-Style-type" content="text/css" />
+<meta http-equiv="Content-Script-type" content="text/javascript" />
+<link rel="stylesheet" href="table.css" type="text/css" />
+<style type="text/css"><!--
+body   {background-color:#ffffcc;
+}
+.title {color:#339966;
+        text-align:center;
+}
+.que   {color:#ffffff;
+        background-color:#339966;
+
+}
+.ans   {color:#000000;
+        background-color:#ccff99;
+}
+--></style>
+
+<script type="text/javascript">
+<!--
+function init() {
+var arr=Array();
+
+var ss = "";
+var querys=location.search;
+if(querys) {
+var q = querys.replace(/^\?/,'').split('&');
+for(i=0 ; i<1 ; i++){
+var pair=q[i].split('=');
+ss += pair[1] + "\n";
+}
+}
+document.searchform1.keywords1.value=ss;
+}
+
+function Link_Click(code){
+window.location.href = 'detail.html' + '?no=' + code; 
+}
+
+window.onload= init;
+
+//-->
+
+</script>
+</head>
+<body>
+<div class="main">
+
+<h1 class="title">検索結果一覧</h1>
+
+
+<table class="example" align="center">
+
+	<thead>
+	<tr>
+	<th>見出しセル1</th>
+	<th>見出しセル2</th>
+	<th>見出しセル3</th>
+	<th>見出しセル4</th>
+	<th>見出しセル5</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+	<td>フッタセル1</td>
+	<td>フッタセル2</td>
+	<td>フッタセル3</td>
+	<td>フッタセル4</td>
+	<td>フッタセル5</td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr>
+	<td><a href="javaScript:Link_Click(0)">データセル1-1</a></td>
+	<td>データセル1-2</td>
+	<td>データセル1-3</td>
+	<td>データセル1-4</td>
+	<td>データセル1-5</td>
+	</tr>
+	<tr>
+	<td><a href="javaScript:Link_Click(1)">データセル2-11</a></td>
+	<td>データセル2-2</td>
+	<td>データセル2-3</td>
+	<td>データセル2-4</td>
+	<td>データセル2-5</td>
+	</tr>
+	<tr>
+	<td><a href="javaScript:Link_Click(2)">データセル3-11</a></td>
+	<td>データセル3-2</td>
+	<td>データセル3-3</td>
+	<td>データセル3-4</td>
+	<td>データセル3-5</td>
+	</tr>
+	<tr>
+	<td><a href="javaScript:Link_Click(3)">データセル4-11</a></td>
+	<td>データセル4-2</td>
+	<td>データセル4-3</td>
+	<td>データセル4-4</td>
+	<td>データセル4-5</td>
+	</tr>
+	</tbody>
+
+</table>
+
+
+<tr>
+<p align="center"><a href="./menu1.html">戻る</a></p>
+</tr>
+</form>
+
+</div>
+</body>
+</html>

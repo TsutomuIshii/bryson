@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<link rel="stylesheet" type="text/css" href="detail.css">
+<title>詳細画面<</title>
+<style type="text/css"><!--
+body   {background-color:#ffffcc;
+}
+.title {color:#339966;
+        text-align:center;
+}
+.que   {color:#ffffff;
+        background-color:#339966;
+
+}
+.ans   {color:#000000;
+        background-color:#ccff99;
+}
+--></style>
+<script type="text/javascript"><!--
+var str = "";
+//URLの?以降をlocation.searchから取得、正規表現でno=(数値)の数値のみを取得。
+var no = location.search.match(/[?&]no=(\d+)(&|$)/);
+if(no != null){
+  no = no[1];
+}
+for(var i = 1; i <= 4; i++){
+  var test = "";
+  if(i == no) test = i;
+  //str += '<div class="uke ' + test + '">受け取り' + i + '</div>';
+}
+//document.write(str);
+//alert(no);
+document.detail_form.detail2.value=no;
+// -->
+</script>
+
+</head>
+<body>
+
+<form method="post" action="detail.html" name="detail_form" class="contact">
+
+<h1 class="title">詳細情報</h1>
+
+<div class="fields" >
+
+<table align="center" width="700px">
+	<caption>詳細情報</caption>
+	<tbody>
+	<tr>
+	<th><label for="type">お問い合わせ</label></th>
+	<td class="required"></td>
+	<td>AAAAAA</td>
+	</tr>
+	<tr>
+	<th><label for="message">お問い合わせ内容</label></th>
+	<td class="required"></td>
+	<td>BBBBBBB</td>
+	</tr>
+	</tbody>
+</table>
+
+</div>
+
+<div class="fields">
+
+<table align="center">
+	<caption>お客様情報</caption>
+	<tbody>
+	<tr>
+	<th><label for="company">会社名/団体名</label></th>
+	<td class="arbitrary"></td>
+	<td>株式会社 DDDD</td>
+	</tr>
+	<tr>
+	<th><label for="section">部署名</label></th>
+	<td class="arbitrary"></td>
+	<td>Web制作事業部</td>
+	</tr>
+	<tr>
+	<th><label for="name">ご担当者名</label></th>
+	<td class="required"></td>
+	<td>田具 太郎</td>
+	</tr>
+	<tr>
+	<th><label for="name2">ご担当者名 <span class="supplement">（フリガナ）</span></label></th>
+	<td class="required"></td>
+	<td>タグ タロウ</td>
+	</tr>
+	<tr>
+	<th><label for="email">メールアドレス</label></th>
+	<td class="required"></td>
+	<td>MAIL@gmail.com</td>
+	</tr>
+	<tr>
+	<th><label for="tel1">電話番号</label></th>
+	<td class="arbitrary"></td>
+	<td>03 - 11111111 -999999</td>
+	</tr>
+	<tr>
+	<th><label for="fax1">FAX番号</label></th>
+	<td class="arbitrary"></td>
+	<td>03 - 11111111 -999999</td>
+	</tr>
+	<tr>
+	<th rowspan="3"><label for="zip1">ご住所</label></th>
+	<td class="arbitrary"></td>
+	<td><label for="zip1">郵便番号</label> 000 - 9999</td>
+	</tr>
+	<tr>
+	</tr>
+	<tr>
+	<td class="arbitrary"></td>
+	<td>千代田区大手町1-2-3 ○○ビル10F</td>
+	</tr>
+	<tr>
+	<th><label for="remark">備考</label></th>
+	<td class="arbitrary"></td>
+	<td></td>
+	</tr>
+	</tbody>
+</table>
+
+</div>
+
+<p align="center"><a href="./result.html">戻る</a></p>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>メニュー６クイズフォーム</title>
+<style type="text/css"><!--
+body {background-color:#ffffcc;
+}
+.title {color:#339933;
+        text-align:center;
+}
+.note  {color:#330033;
+        line-height:130%;
+}
+.num   {color:#ff3333;
+        font-size:120%;
+        font-weight:bold;
+}
+.que  {color:#000033;
+       background-color:#ccffcc;
+}
+.ans   {background-color:#99ff99;
+}
+--></style>
+
+<script type="text/javascript"><!--
+function quiz(Quest) {
+var max = 7;
+var num = 4;
+var total = 0;
+var msg = "不可";
+for (i=0; i<max; i++){
+   for (j=0; j<=num; j++){
+      if (Quest.elements[i].options[j].selected){
+      total = total + parseInt(Quest.elements[i].options[j].value);
+      }
+   }
+}
+if(total==max)
+   msg="優";
+   else if(total>=5)
+   msg="良";
+   else if(total>=3)
+   msg="可";
+alert(max +"問中" + total + "問の正解です！\nあなたの成績は「" + msg + "」です。");
+}
+// --></script>
+
+</head>
+<body>
+<h1 class="title">メニュー６クイズフォーム</h1>
+<form>
+<table cellpadding="10" cellspacing="2" border="0" align="center" width="70%">
+<tr>
+<td colspan="2" class="note">
+ＳＦ映画の名シーンから原作まで、マニアックなクイズです。右の選択肢から選択して、最後に［採点する］ボタンをクリックして下さい。
+</td>
+</tr>
+<tr>
+<td colspan="2" class="note"><noscript>
+なお、JavaScriptをオンにしないと、採点されません。
+</noscript></td>
+</tr>
+
+<tr>
+<td class="que">
+<span class="num">Q1</span>
+『エイリアン』に出てくる猫の名前は？
+</td>
+<td class="ans"><select>
+<option value="0">---正解はどれ？---</option>
+<option value="1">ジョーンジー</option>
+<option value="0">タマ</option>
+<option value="0">ジョージ</option>
+<option value="0">ミケ</option>
+</select></td>
+</tr>
+
+<tr>
+<td class="que">
+<span class="num">Q2</span>
+『遊星からの物体Ｘ』でリメークされたオリジナルの映画の邦題は？
+</td>
+<td class="ans"><select>
+<option value="0">---正解はどれ？---</option>
+<option value="0">彗星からの物体X</option>
+<option value="0">遊星から来た物体X</option>
+<option value="1">遊星よりの物体X</option>
+<option value="0">郵政民営化の物体X</option>
+</select></td>
+</tr>
+
+<tr>
+<td class="que">
+<span class="num">Q3</span>
+『惑星ソラリス』の原作者で、東欧ＳＦを代表するポーランドの作家は？
+</td>
+<td class="ans"><select>
+<option value="0">---正解はどれ？---</option>
+<option value="0">Ａ・タルコフスキー</option>
+<option value="0">アンジェイ・ワイダ</option>
+<option value="1">スタニスワフ・レム</option>
+<option value="0">ストルガツキー兄弟</option>
+</select></td>
+</tr>
+
+<tr>
+<td class="que">
+<span class="num">Q4</span>
+『A.I』のラストで、主人公に幸福な過去の１日を過ごさせる者たちの正体は？
+</td>
+<td class="ans"><select>
+<option value="0">---正解はどれ？---</option>
+<option value="0">宇宙人</option>
+<option value="1">ロボット</option>
+<option value="0">E.T.</option>
+<option value="0">寅さん</option>
+</select></td>
+</tr>
+
+<tr>
+<td class="que">
+<span class="num">Q5</span>
+『ストーカー』の原作の原題は？
+</td>
+<td class="ans"><select>
+<option value="0">---正解はどれ？---</option>
+<option value="0">ゾーン</option>
+<option value="0">密猟者</option>
+<option value="1">路傍のピクニック</option>
+<option value="0">宇宙の戦士</option>
+</select></td>
+</tr>
+
+<tr>
+<td class="que">
+<span class="num">Q6</span>
+カルト映画（？）『バッカルー・バンザイの８次元ギャラクシー』の主演俳優は？
+</td>
+<td class="ans"><select>
+<option value="0">---正解はどれ？---</option>
+<option value="1">ピーター・ウエラー</option>
+<option value="0">ジョフ・ゴールドブラム</option>
+<option value="0">レナード・ニモイ</option>
+<option value="0">ジョージ・タケイ</option>
+</select></td>
+</tr>
+
+<tr>
+<td class="que">
+<span class="num">Q7</span>
+『未来世紀ブラジル』に出演していたモンティパイソンのメンバーは？
+</td>
+<td class="ans"><select>
+<option value="0">---正解はどれ？---</option>
+<option value="0">テリー・ギリアム</option>
+<option value="1">マイケル・ペイリン </option>
+<option value="0">エリック・アイドル</option>
+<option value="0">グラハム・チャプマン</option>
+</select></td>
+</tr>
+
+</table>
+<div align="center"><br>
+<input type="button" value="採点する" onClick="javascript:quiz(this.form)">
+<input type="reset" value="やり直す">
+</div>
+</form>
+<p align="center"><a href="../index.html">戻る</a></p>
+</body>
+</html>
